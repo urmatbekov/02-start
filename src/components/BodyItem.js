@@ -12,6 +12,14 @@ class BodyItem extends Component {
         checked:false
     }
 
+    onClickChecked = () => {
+        this.setState((state)=>{
+            return {
+                checked:!state.checked
+            }
+        })
+    }
+
     render(){
 
         let classNameChecked = ""
@@ -20,7 +28,7 @@ class BodyItem extends Component {
             classNameChecked = "checked"
         }
 
-        return <li className={classNameChecked}>{this.props.item}</li>
+        return <li onClick={this.onClickChecked} className={classNameChecked}>{this.props.item}</li>
     }
 }
 
