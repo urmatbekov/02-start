@@ -6,6 +6,7 @@ const App = () => {
         <div>
             <Header />
             <Body />
+            
         </div>
     )
 }
